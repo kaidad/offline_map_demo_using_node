@@ -340,8 +340,12 @@ public class SQLitePlugin extends CordovaPlugin {
                 int colCount = cur.getColumnCount();
 
                 // Build up JSON result object for each row
+                int objNumber = 0;
                 do {
                     //JSONObject row = new JSONObject();
+                    if (objNumber++ > 0) {
+                        sb.append(COMMA);
+                    }
                     sb.append(OBJ_START);
                     for (int i = 0; i < colCount; ++i) {
                         key = cur.getColumnName(i);
