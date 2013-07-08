@@ -426,3 +426,4 @@ public class SQLitePlugin extends CordovaPlugin {
         webView.sendJavascript(cb);
     }
 }
+
